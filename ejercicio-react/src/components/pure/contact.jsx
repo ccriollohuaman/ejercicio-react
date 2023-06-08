@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Contact } from '../../models/contact.class';
+import StateContactComponent from './state_contact';
 
 
 const ContactComponent = ( { contact } ) => {
@@ -15,9 +16,7 @@ const ContactComponent = ( { contact } ) => {
             <h4>
                 Email: { contact.email }
             </h4>
-            <h4>
-                Estado: { contact.connected ? 'Contacto En Línea':'Contacto No Disponible' }
-            </h4>
+            <StateContactComponent estado={true}></StateContactComponent>
         </div>
     );
 };

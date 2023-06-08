@@ -1,14 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import ContactListComponent from './components/container/contact_list';
+import { Contact } from './models/contact.class';
+import ContactComponent from './components/pure/contact';
 
 function App() {
+
+  const defaultContact = new Contact('Name', 'LastName', 'name@email.com',false)
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* Componente de Contact */}
-        <ContactListComponent></ContactListComponent>
+        <ContactComponent contact={defaultContact}></ContactComponent>
       </header>
     </div>
   );
